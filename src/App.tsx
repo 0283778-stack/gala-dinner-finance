@@ -95,33 +95,54 @@ function App() {
       </section>
 
       {/* Modal Dresscode */}
-      <dialog id="dresscodeModal" className="rounded-xl p-6 max-w-4xl w-full">
-        <h4 className="text-2xl font-semibold mb-4">Dresscode: Formal Elegante</h4>
-        <div className="grid sm:grid-cols-2 gap-6">
-          <div>
-            <h5 className="font-semibold mb-2">Hombre</h5>
-            <img
-              src="https://images.unsplash.com/photo-1520975922324-8b456906c813?q=80&w=1200&auto=format&fit=crop"
-              alt="Traje formal hombre"
-              className="rounded-lg shadow"
-            />
-          </div>
-          <div>
-            <h5 className="font-semibold mb-2">Mujer</h5>
-            <img
-              src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=1200&auto=format&fit=crop"
-              alt="Vestido formal mujer"
-              className="rounded-lg shadow"
-            />
-          </div>
-        </div>
-        <form method="dialog" className="mt-6 text-center">
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
-            Cerrar
-          </button>
-        </form>
-      </dialog>
+      <dialog id="dresscodeModal" className="rounded-2xl p-6 max-w-5xl w-full backdrop:bg-black/60">
+  <h4 className="text-2xl font-semibold mb-4">Dresscode: Formal Elegante</h4>
+  <p className="text-gray-600 mb-6">
+    Ejemplos visuales para ayudarte a elegir tu atuendo.
+  </p>
+
+  <div className="grid sm:grid-cols-2 gap-6">
+    {/* Hombre */}
+    <div>
+      <h5 className="font-semibold mb-2">Hombre</h5>
+      <div className="overflow-hidden rounded-xl shadow">
+        <img
+          src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=1200&q=80"
+          alt="Traje formal hombre"
+          className="w-full h-64 object-cover"
+          loading="lazy"
+        />
+      </div>
+      <ul className="text-sm text-gray-600 mt-3 list-disc pl-5 space-y-1">
+        <li>Traje oscuro, camisa lisa</li>
+        <li>Corbata sobria y zapatos formales</li>
+      </ul>
     </div>
+
+    {/* Mujer */}
+    <div>
+      <h5 className="font-semibold mb-2">Mujer</h5>
+      <div className="overflow-hidden rounded-xl shadow">
+        <img
+          src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?auto=format&fit=crop&w=1200&q=80"
+          alt="Vestido formal mujer"
+          className="w-full h-64 object-cover"
+          loading="lazy"
+        />
+      </div>
+      <ul className="text-sm text-gray-600 mt-3 list-disc pl-5 space-y-1">
+        <li>Vestido cóctel / conjunto sastre</li>
+        <li>Accesorios discretos, tacón medio/alto</li>
+      </ul>
+    </div>
+  </div>
+
+  <form method="dialog" className="mt-6 text-center">
+    <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+      Cerrar
+    </button>
+  </form>
+</dialog>
   );
 }
 
